@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+</head>
+<body>
+    <div id="header">
+        <div id="Nompage">
+            <a class="redic" href="accueil.html" id="home-btn">
+            <h1>TicketHack</h1>
+           </a>
+        </div>
+        <div id="lespages">
+            <div id="Cart"> <a class="redic" href="cart.html" id="cart-btn"><h3>Cart</h3></a></div>
+            <div id="Booking"><a class="redic" href="booking.html" id="cart-btn"><h3>Booking</h3></a></div> 
+        </div>
+    </div>
+    <div id="container">
+            <div id="phrasedaccroche">
+                <h2 id="firstp">Explore the  world effortelessly by train!</h2>
+                <h3 id="secondp">compare, back and enjoy cheap prices for train ticktes: your journey starts on TicketHack</h3>
+            </div>
+        <div id="content-left">
+            <div class="btn">
+                <div class="btn-search"><input id="search-message" type="text" placeholder=" Departure..." /></div>
+                <div class="btn-search"> <input id="search-message" type="text" placeholder=" Arrival..." /></div>
+            </div>
+                <div class="btn" id="date"><input type="date"></div>
+                <div class="btn">
+                <button type="button" id="search">Search</button>          
+            </div>
+        </div>
+        <div id="content-right">
+          <div id="image">
+            <img id="img" src="images/train.png">
+          </div>
+          <div>
+            <p id="notfound">Train not found!</p>
+          </div>
+        </div>
+    </div>
+    <script src="script.js"></script> 
+</body>
+</html>
