@@ -10,11 +10,11 @@ document.querySelector('#search').addEventListener('click', function(){
         date: date
     }
     ];
-       fetch('http://localhost:3000/trips')
+  fetch('http://localhost:3000/trips')
  .then(response => response.json())
  .then(data => {
     for(let i = 0; i < data.length; i++) {
-    console.log(data[i].departure);
+    console.log(data.departure);
 
    document.querySelector('#content-right').innerHTML += 
    ` <div class="cityContainer">
