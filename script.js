@@ -18,6 +18,7 @@ let date = document.querySelector('#search-date').value;
     fetch(`http://localhost:3000/trips/${depart}/${arrivee}/${date}`)
      .then(response => response.json())
      .then( data => {
+        const pattern = /(\d{2}:\d{2})/;
         // console.log(data);
         document.querySelector('#content-right').innerHTML = ''
 
@@ -28,7 +29,7 @@ let date = document.querySelector('#search-date').value;
         if(depart === data.trips[i].departure){
            document.querySelector('#content-right').innerHTML += 
         `<div id="listTrip">
-            <p id="infoTrip">${data.trips[i].departure} > ${data.trips[i].arrival} > ${data.trips[i].date}€ </p>
+            <p id="infoTrip">${data.trips[i].departure} > ${data.trips[i].arrival} > ${data.trips[i].date.match(pattern)[0]}€ </p>
             <button class="bookButton">Book</button>
             </div>`
      }    // console.log(data.trips[i].departure);
