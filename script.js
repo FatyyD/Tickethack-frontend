@@ -19,16 +19,18 @@ let date = document.querySelector('#search-date');
      .then(response => response.json())
      .then( data => {
         // console.log(data);
+        document.querySelector('#content-right').innerHTML = ''
+
      for(let i = 0; i < data.trips.length; i++) {
         // console.log("dd");
         // console.log(data.trips[i].departure);
+
         if(depart === data.trips[i].departure){
            document.querySelector('#content-right').innerHTML += 
-        ` <div class="cityContainer">
-          <p class="name">${data.trips[i].departure}</p>
-          <p class="name">${data.trips[i].arrival}</p>
-
-        </div> ` 
+        `<div id="listTrip">
+            <p id="infoTrip">${data.trips[i].departure} > ${data.trips[i].arrival} € </p>
+            <button class="bookButton">Book</button>
+            </div>`
      }
             // console.log(data.trips[i].departure);
         else{

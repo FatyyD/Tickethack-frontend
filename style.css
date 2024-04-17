@@ -97,6 +97,7 @@ color:rgb(17, 149, 105)
     grid-row-end: 11;
     grid-column-start: 8;
     grid-column-end: 12;
+    overflow: scroll;
 
  }
 
